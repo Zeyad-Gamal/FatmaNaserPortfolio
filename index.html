@@ -163,7 +163,7 @@ font-style: normal;
     display: flex;flex-direction: column;margin-top: 1rem;
 }
 
-.projects-container .project-box img{
+.projects-container .project-main-box .project-box img{
     position: relative;width: 100%;height: 100%;
 }
 
@@ -213,6 +213,40 @@ font-style: normal;
          #ui-container{
             display: grid;
          }
+
+         @media only screen and (max-width: 600px) {
+            .idJob{
+                font-size: 40px !important;margin: 0;margin-left: 0 !important;
+            }
+
+            .def{
+                display: flex;flex-direction: column-reverse;margin: 0;text-align: center;
+            }
+
+            
+            
+
+            .projects-container .project-main-box{
+    width: 15.6rem !important;height: 320px;
+}
+
+.projects-container .project-main-box .project-box{
+    height: 100%;background-color: #FFEBDB !important;width: 100%;padding-inline: 0.7rem !important;
+}
+
+.projects-container .project-main-box .project-content{
+    /* display: flex;flex-direction: column;margin-top: 1rem; */
+}
+
+.projects-container .project-main-box .project-box img{
+    /* position: relative;width: 100%;height: 100%; */
+}
+
+.projectDepartment{
+    width: 10rem;
+}
+
+}
 </style>
 </head>
 <body>
@@ -271,9 +305,9 @@ font-style: normal;
               <h1 class="title24">Hi I am </h1>
               <h1 class="title32">Fatma Naser</h1>
               <div style="display: flex;flex-direction: column;">
-                <h1 style="font-size: 70px;font-weight: 750;text-shadow: 2px 2px 4px #000000;
+                <h1 class="idJob" style="font-size: 70px;font-weight: 750;text-shadow: 2px 2px 4px #000000;
 ">UI & UX</h1>
-              <h1 style="font-size: 70px;font-weight: 750;margin-left: 11rem;text-shadow: 2px 2px 4px #000000;
+              <h1 class="idJob" style="font-size: 70px;font-weight: 750;margin-left: 11rem;text-shadow: 2px 2px 4px #000000;
 ">Designer</h1>
               </div>
 
@@ -567,10 +601,19 @@ font-style: normal;
 </div>
 
 
+<select class="form-select" style="width: 50%;margin: auto;" name="" id="">
+    <option value=""><button onclick="_handleProjects('all-container')" class="btn btn-light projects-btn">All</button></option>
+    <option value=""><button style="background-color: #FD6F00;color: #FFFFFF;" onclick="_handleProjects('ui-container')" class="btn btn-light projects-btn">UI/UX</button></option>
+    <option value=""><button onclick="_handleProjects('web-container')" class="btn btn-light projects-btn">Web Design</button></option>
+    <option value=""><button onclick="_handleProjects('app-container')" class="btn btn-light projects-btn">App Design</button></option>
+    <option value=""><button onclick="_handleProjects('graphic-container')" class="btn btn-light projects-btn">Graphic Design</button></option>
+</select>
 
 
 
-<div class="projects-container">
+
+
+<div class="projects-container" style="margin-top: 4rem;">
     <div id="all-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
         <h5>all</h5>
         <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
@@ -688,9 +731,9 @@ font-style: normal;
         </div>
     </div>
     
-    <div id="ui-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+    <div id="ui-container" class="container projectDepartment" style="height: 30rem;overflow: auto;width: 100%;">
         <h5>ui</h5>
-        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
 
