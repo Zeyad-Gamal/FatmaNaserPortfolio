@@ -146,6 +146,73 @@ font-style: normal;
    border-color: #515151;
    border-radius: 1rem;
 }
+
+.projects-container{
+    padding-bottom: 4rem;
+}
+
+.projects-container .project-main-box{
+    width: 25.6rem;height: 380px;
+}
+
+.projects-container .project-main-box .project-box{
+    height: 100%;background-color: #FFEBDB !important;width: 100%;padding-inline: 1.5rem;
+}
+
+.projects-container .project-main-box .project-content{
+    display: flex;flex-direction: column;margin-top: 1rem;
+}
+
+.projects-container .project-box img{
+    position: relative;width: 100%;height: 100%;
+}
+
+
+/* Scrollbar width for Chrome, Safari, and Edge */
+.projects-container .container {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ffb074 #f1f1f1; /* For Firefox */
+}
+
+/* WebKit scrollbar styling */
+.projects-container .container::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.projects-container .container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.projects-container .container::-webkit-scrollbar-thumb {
+  background-color: #4CAF50; /* Scrollbar color */
+  border-radius: 10px; /* Roundness of the scrollbar */
+  border: 3px solid #f1f1f1; /* Space around the scrollbar */
+  
+}
+
+.projects-container .container::-webkit-scrollbar-thumb:hover {
+  background-color: #45a049; /* Color on hover */
+}
+
+
+
+
+.projects-btn{
+            border-radius: 3px !important;
+         }
+
+         .projects-btn:hover{
+            font-size: 1rem;transition: 0s !important;
+         }
+
+
+         .projectDepartment{
+            display: none;
+         }
+
+         #ui-container{
+            display: grid;
+         }
 </style>
 </head>
 <body>
@@ -492,11 +559,605 @@ font-style: normal;
 
 
 <div class="projects-buttons">
-    <button class="btn btn-light">All</button>
-    <button class="btn btn-light">UI/UX</button>
-    <button class="btn btn-light">Web Design</button>
-    <button class="btn btn-light">App Design</button>
-    <button class="btn btn-light">Graphic Design</button>
+    <button onclick="_handleProjects('all-container')" class="btn btn-light projects-btn">All</button>
+    <button style="background-color: #FD6F00;color: #FFFFFF;" onclick="_handleProjects('ui-container')" class="btn btn-light projects-btn">UI/UX</button>
+    <button onclick="_handleProjects('web-container')" class="btn btn-light projects-btn">Web Design</button>
+    <button onclick="_handleProjects('app-container')" class="btn btn-light projects-btn">App Design</button>
+    <button onclick="_handleProjects('graphic-container')" class="btn btn-light projects-btn">Graphic Design</button>
+</div>
+
+
+
+
+
+<div class="projects-container">
+    <div id="all-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+        <h5>all</h5>
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+
+
+
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+    <div id="ui-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+        <h5>ui</h5>
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+
+
+
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="web-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+        <h5>web</h5>
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+
+
+
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="app-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+        <h5>app</h5>
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+
+
+
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="graphic-container" class="container projectDepartment" style="height: 30rem;overflow: auto;">
+        <h5>graphic</h5>
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+
+
+
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+            <div class="col-md-4 project-main-box">
+
+                <div class="project-box">
+                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+
+                </div>
+                <div class="project-content">
+                    <h4>fd</h4>
+                    <p>dsdfdsfs</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
 </div>
 
 
@@ -511,6 +1172,37 @@ font-style: normal;
     <script src="script/bootstrap.min.js"></script>
 
 
+
+    <script>
+
+       var _projectsBtns =  document.querySelectorAll('.projects-btn');
+
+        for (var i = 0; i < _projectsBtns.length; i++) {
+            _projectsBtns[i].addEventListener("click", function(){ 
+                _projectsBtns.forEach(btn => {
+                    btn.style.background="";
+                    btn.style.color="";
+                });
+                this.style.background="#FD6F00";
+                this.style.color="#FFFFFF";
+                
+         });
+            
+        }
+
+
+
+
+        function _handleProjects(id) {
+            var _departments =  document.querySelectorAll('.projectDepartment');
+            for (var i = 0; i < _departments.length; i++) {
+                _departments[i].style.display='none';
+        }
+
+        document.getElementById(id).style.display='grid';
+        }
+
+    </script>
     
 </body>
 </html>
