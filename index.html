@@ -59,7 +59,7 @@ font-style: normal;
 
 }
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,i{
     color: var(--text-color);
 }
 
@@ -220,9 +220,10 @@ h1,h2,h3,h4,h5{
     display: flex;flex-direction: column;margin-top: 1rem;
 }
 
-.projects-container .project-main-box .project-content h4{
-    font-size: 19px;
-    color: #FD6F00;margin: 0;
+.projects-container .project-main-box .project-content a,.projects-container .project-main-box .project-content h4{
+    font-size: 19px !important;
+    color: #FD6F00 !important;margin: 0;
+    text-decoration: none !important;
 }
 
 .projects-container .project-main-box .project-content p{
@@ -752,7 +753,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 <div class="projects-container" style="margin-top: 4rem;">
-    <div id="all-container" class="container projectDepartment" style="height: 33rem;overflow: auto;">
+    <div id="all-container" class="container projectDepartment" style="height: 62rem;overflow: auto;">
         <h5>all</h5>
         <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
 
@@ -764,7 +765,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                     <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -775,7 +776,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -786,7 +787,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -799,7 +800,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                     <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -810,7 +811,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -821,7 +822,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -837,7 +838,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                     <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -848,7 +849,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -859,7 +860,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
                 </div>
                 <div class="project-content">
-                    <h4>fd</h4>
+                    <a href=""><h4>fd</h4></a>
                     <p>dsdfdsfs</p>
                 </div>
             </div>
@@ -1371,7 +1372,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
              .shadow-effect {
     background: #f1f1f1;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row; flex-wrap: w;
     align-items: center;
     gap: 1rem;
     padding: 20px;
@@ -1386,7 +1387,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
         #customers-testimonials .shadow-effect p {
             font-family: inherit;
-            font-size: 17px;
+            font-size: 2vh;
             line-height: 1.5;
             margin: 0 0 17px 0;
             font-weight: 300;
@@ -1426,7 +1427,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             /* background-color: #3190E7; */
         }
         .owl-carousel .owl-item img {
-            max-width: 100%;
+            max-width: 20vh;
             /* margin: 0 auto 17px; */
             border-radius: 50%;
             padding-block: 2rem;
