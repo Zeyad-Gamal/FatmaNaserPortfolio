@@ -41,22 +41,37 @@ font-style: normal;
 
 
          :root{
+            --body-bg:#ffffff;
             --background-color: #ffffff; /* Dark mode background */
     --text-color: #121212; /* Dark mode text color */
     --main-color:  #FD6F00; /* Dark mode border color */
     --box-color: #F8F8F8;
     --paragraph:#000000;
     --progress-title-color:#333;
+    --logo-text:#1E1E1E;
+    --logo-text-second:#545454;
+    --footer-up:#F8F8F8;
+    --footer-down:#545454;
          }
 
          [data-bs-theme='dark'] {
+            --body-bg:#1E1E1E;
     --background-color: #121212; /* Dark mode background */
     --text-color: #ffffff; /* Dark mode text color */
     --main-color:  #FD6F00; /* Dark mode border color */
     --box-color: #121212;
     --paragraph:#000000;
     --progress-title-color:#cdcdcd;
+    --logo-text:#ffffff;
+    --logo-text-second:#ffffff;
+    --footer-up:#1E1E1E;
+    --footer-down:#121212;
 
+}
+
+
+body{
+    background-color: var(--body-bg);
 }
 
 h1,h2,h3,h4,h5,i{
@@ -167,8 +182,8 @@ h1,h2,h3,h4,h5,i{
 
 
         .services-box{
-    width: 16rem;height: 100%;background-color: #F8F8F8;text-align: left;padding-block: 1rem;padding-inline: 1rem;border-radius: 0.5rem;
-    color: var(--paragraph);
+    width: 16rem;height: 100%;background-color: #F8F8F8;text-align: left;padding-block: 1.7rem;padding-inline: 1rem;border-radius: 0.5rem;
+    color: var(--paragraph);display: flex;flex-direction: column;gap: 0.5rem;
 }
 
 .services-box i{
@@ -357,8 +372,8 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
         <div class="collapse navbar-collapse navbar-custom" id="navbarNav">
             <a class="navbar-brand" href="#">
                 <img src="images/logo/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
-                <span style="color: #1E1E1E;font-weight: 600;font-size: 4vh;">
-                    F<span style="color: #545454;font-weight: normal;">atma</span>
+                <span style="color: var(--logo-text);font-weight: 600;font-size: 4vh;">
+                    F<span style="color: var(--logo-text-second);font-weight: 10;font-size: 3.7vh;">atma</span>
                 </span>
             </a>
             <ul class="navbar-nav">
@@ -687,8 +702,8 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     </div>
 
 
-    <div class="container" style="margin: auto !important;margin-top: 4rem !important;">
-        <div class="row" style="text-align: center;justify-content: space-around;gap: 0.1rem;row-gap: 1rem;">
+    <div class="container" style="margin: auto !important;margin-top: 4rem !important;padding: 1.5rem;">
+        <div class="row" style="text-align: center;justify-content: center;gap: 1.5rem;row-gap: 1rem;">
             <div class="col-md-3 services-box" >
                 <i class="bi bi-clipboard2-pulse"></i>
                 <h4 class="service-address">UI / UX</h4>
@@ -744,11 +759,11 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 <select id="projectsButtonSelect" class="form-select" style="width: 50%;margin: auto;" name="" id="">
-    <option value=""><button onclick="_handleProjects('all-container')" class="btn btn-light projects-btn">All</button></option>
-    <option value=""><button style="background-color: #FD6F00;color: #FFFFFF;" onclick="_handleProjects('ui-container')" class="btn btn-light projects-btn">UI/UX</button></option>
-    <option value=""><button onclick="_handleProjects('web-container')" class="btn btn-light projects-btn">Web Design</button></option>
-    <option value=""><button onclick="_handleProjects('app-container')" class="btn btn-light projects-btn">App Design</button></option>
-    <option value=""><button onclick="_handleProjects('graphic-container')" class="btn btn-light projects-btn">Graphic Design</button></option>
+    <option  value="all-container">All</option>
+    <option  value="ui-container" >UI/UX</option>
+    <option  value="web-container" >Web Design</option>
+    <option  value="app-container" >App Design</option>
+    <option  value="graphic-container" >Graphic Design</option>
 </select>
 
 
@@ -756,9 +771,8 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 <div class="projects-container" style="margin-top: 4rem;">
-    <div id="all-container" class="container projectDepartment" style="height: 62rem;overflow: auto;">
-        <h5>all</h5>
-        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+    <div id="all-container" class="container projectDepartment" style="height: 62rem;overflow: auto;width: 100%;">
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
 
@@ -873,8 +887,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
         </div>
     </div>
     
-    <div id="ui-container" class="container projectDepartment" style="height: 33rem;overflow: auto;width: 100%;">
-        <h5>ui</h5>
+    <div id="ui-container" class="container projectDepartment" style="height: 62rem;overflow: auto;width: 100%;">
         <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
@@ -991,9 +1004,8 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     </div>
 
 
-    <div id="web-container" class="container projectDepartment" style="height: 33rem;overflow: auto;">
-        <h5>web</h5>
-        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+    <div id="web-container" class="container projectDepartment" style="height: 62rem;overflow: auto;width: 100%;">
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
 
@@ -1109,16 +1121,15 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     </div>
 
 
-    <div id="app-container" class="container projectDepartment" style="height: 33rem;overflow: auto;">
-        <h5>app</h5>
-        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+    <div id="app-container" class="container projectDepartment" style="height: 62rem;overflow: auto;width: 100%;">
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
 
             <div class="col-md-4 project-main-box">
 
                 <div class="project-box">
-                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
+                    <img class="img-fluid" src="images/app1.png" alt="">
                 </div>
                 <div class="project-content">
                     <h4>fd</h4>
@@ -1128,42 +1139,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             <div class="col-md-4 project-main-box">
 
                 <div class="project-box">
-                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
-
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-            <div class="col-md-4 project-main-box">
-
-                <div class="project-box">
-                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
-
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-
-
-            
-            <div class="col-md-4 project-main-box">
-
-                <div class="project-box">
-                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-            <div class="col-md-4 project-main-box">
-
-                <div class="project-box">
-                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
+                    <img class="img-fluid" src="images/app2.png" alt="">
 
                 </div>
                 <div class="project-content">
@@ -1174,7 +1150,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             <div class="col-md-4 project-main-box">
 
                 <div class="project-box">
-                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
+                    <img class="img-fluid" src="images/app3.jfif" alt="">
 
                 </div>
                 <div class="project-content">
@@ -1184,52 +1160,21 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             </div>
 
 
+           
 
 
 
-            
-            <div class="col-md-4 project-main-box">
 
-                <div class="project-box">
-                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5f291f86223735.5da3c2a801a91.jpg" alt="">
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-            <div class="col-md-4 project-main-box">
 
-                <div class="project-box">
-                    <img class="img-fluid" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/322344895/original/7ffc6b1e22e4533187a00454f096c1a8683677f1/design-website-landing-page-ui-ux-design-in-figma.png" alt="">
-
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-            <div class="col-md-4 project-main-box">
-
-                <div class="project-box">
-                    <img class="img-fluid" src="https://s3.amazonaws.com/creativetim_bucket/products/448/thumb/opt_sds_free_thumbnail.jpg?1614876201" alt="">
-
-                </div>
-                <div class="project-content">
-                    <h4>fd</h4>
-                    <p>dsdfdsfs</p>
-                </div>
-            </div>
-
+      
 
 
         </div>
     </div>
 
 
-    <div id="graphic-container" class="container projectDepartment" style="height: 33rem;overflow: auto;">
-        <h5>graphic</h5>
-        <div class="row" style="gap: 1.3rem;row-gap: 7rem;">
+    <div id="graphic-container" class="container projectDepartment" style="height: 62rem;overflow: auto;width: 100%;">
+        <div class="row" style="gap: 1.3rem;row-gap: 7rem;justify-content: center;">
 
 
 
@@ -1483,26 +1428,65 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                         </div>
                     </div>
                 </div>
-                <!-- TESTIMONIAL 2 -->
                 <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
                     </div>
-                </div>  <div class="item">
+                </div>     <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
                     </div>
-                </div>  <div class="item">
+                </div>     <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
                     </div>
-                </div>  <div class="item">
+                </div>     <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
+                    </div>
+                </div>     <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
+                    </div>
+                </div>     <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                        <div style="display: flex;flex-direction: column;gap: 0;">
+                            <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1.3rem;right: 1rem;">“</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
+                                <span style="color: #FD6F00;text-align: center;font-size:4vh;position: relative;bottom: 2rem;right:1rem;">“</span> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1564,17 +1548,17 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 
-<section class="sectionC services">
+<section class="sectionC contact">
     <h1 class="title64" style="text-align: center;">Lets Design Together </h1>
     <div style="display: flex;justify-content: center;width: 50%;margin: auto;">
         <p style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
     </div>
 
 
-  <div class="container">
-    <div class="row" style="justify-content: center !important;">
+  <div class="container" style="margin-top: 3rem;">
+    <div class="row" style="justify-content: center !important;gap: 12px; ">
         <div class="col-md-4">
-            <input class="form-control emailInput" type="email" style="background-color: #ffffff;color: #121212;" placeholder="Enter Your Email">
+            <input class="form-control emailInput" type="email" style="background-color: #ffffff;color: #121212;margin-right: 12px !important; " placeholder="Enter Your Email">
         </div>
 
         <div class="col-md-2">
@@ -1592,6 +1576,119 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 
+
+<footer style="margin-top: 10rem;background-color: var(--footer-up);">
+   <div style="display: flex;justify-content: center;align-items: center;">
+    <a class="" href="#" style="text-align: center;display: flex;align-items: center;gap: 1rem; text-decoration: none;">
+        <img src="images/logo/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+        <span style="color: var(--logo-text);font-weight: 600;font-size: 6vh;">
+            F<span style="color: #545454;font-weight: normal;">atma</span>
+        </span>
+    </a>
+   </div>
+
+
+
+
+
+
+<!-- --------------------------------- -->
+
+    <!-- Grid container -->
+    <div class="container">
+        <!-- Section: Links -->
+        <div class="">
+          <!-- Grid row-->
+          <div class=" text-center d-flex justify-content-center pt-5" style="gap: 2.7rem !important;display: flex !important;flex-wrap: wrap;">
+            <!-- Grid column -->
+            <div class="">
+              <h6 class=" font-weight-bold">
+                <a href="#!" class="text-white text-decoration-none">Home</a>
+              </h6>
+            </div>
+
+
+            <div class="">
+                <h6 class=" font-weight-bold">
+                  <a href="#!" class="text-white text-decoration-none">About Me</a>
+                </h6>
+              </div>
+
+              <div class="">
+                <h6 class=" font-weight-bold">
+                  <a href="#!" class="text-white text-decoration-none">Services</a>
+                </h6>
+              </div>
+
+              <div class="">
+                <h6 class=" font-weight-bold">
+                  <a href="#!" class="text-white text-decoration-none">Projects</a>
+                </h6>
+              </div>
+
+              <div class="">
+                <h6 class=" font-weight-bold">
+                  <a href="#!" class="text-white text-decoration-none">Testimonials</a>
+                </h6>
+              </div>
+
+              
+              <div class="">
+                <h6 class=" font-weight-bold">
+                  <a href="#!" class="text-white text-decoration-none">Contact</a>
+                </h6>
+              </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </div>
+        <!-- Section: Links -->
+  
+   
+    
+  
+        <!-- Section: Social -->
+
+      
+        <div class="text-center mb-5" style="margin-top: 7rem;">
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-google"></i>
+          </a>
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="" class="text-decoration-none text-white fs-5 me-4">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: var(--footer-down)"
+           >
+        © 2025 Copyright: <span style="color: var(--main-color);font-weight: 720;">Fatma</span>
+       All right reserved
+      </div>
+      <!-- Copyright -->
+
+
+
+
+
+</footer>
 
 
 
@@ -1631,6 +1728,23 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
 
+        var _projectsBtns =  document.querySelectorAll('.projects-btn');
+
+        for (var i = 0; i < _projectsBtns.length; i++) {
+            _projectsBtns[i].addEventListener("click", function(){ 
+                _projectsBtns.forEach(btn => {
+                    btn.style.background="";
+                    btn.style.color="";
+                });
+                this.style.background="#FD6F00";
+                this.style.color="#FFFFFF";
+                
+         });
+            
+        }
+
+
+
 
         function _handleProjects(id) {
             var _departments =  document.querySelectorAll('.projectDepartment');
@@ -1640,6 +1754,14 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
         document.getElementById(id).style.display='grid';
         }
+
+
+
+
+        document.getElementById('projectsButtonSelect').addEventListener('change', function() {
+        var selectedValue = this.value;
+        _handleProjects(selectedValue); // Call the function with the selected value
+    });
 
     </script>
     
