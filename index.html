@@ -46,6 +46,7 @@ font-style: normal;
     --main-color:  #FD6F00; /* Dark mode border color */
     --box-color: #F8F8F8;
     --paragraph:#000000;
+    --progress-title-color:#333;
          }
 
          [data-bs-theme='dark'] {
@@ -54,6 +55,7 @@ font-style: normal;
     --main-color:  #FD6F00; /* Dark mode border color */
     --box-color: #121212;
     --paragraph:#000000;
+    --progress-title-color:#cdcdcd;
 
 }
 
@@ -289,9 +291,13 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
             
             
-
+            @media only screen and (max-width: 520px) {
+                .projects-container .project-main-box{
+    width: 100% !important;
+}
+            }
             .projects-container .project-main-box{
-    width: 15.6rem !important;height: 320px;
+    width: 15.6rem ;height: 40vh !important;
 }
 
 .projects-container .project-main-box .project-box{
@@ -311,12 +317,20 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 }
 
+
+#projectsButtonSelect{
+    display: block !important;
+}
+
+#projectsButton{
+    display: none;
+}
 }
 
 
-
-
-
+#projectsButtonSelect{
+    display: none;
+}
 
 
 
@@ -571,8 +585,9 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
       .progress-title{
     font-size: 18px;
     font-weight: 700;
-    color: #333;
+    color: var(--progress-title-color);
     margin: 0 0 10px;
+    text-align: left;
 }
 .progress{
     height: 12px;
@@ -715,7 +730,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     </div>
 
 
-<div class="projects-buttons">
+<div id="projectsButton" class="projects-buttons">
     <button onclick="_handleProjects('all-container')" class="btn btn-light projects-btn">All</button>
     <button style="background-color: #FD6F00;color: #FFFFFF;" onclick="_handleProjects('ui-container')" class="btn btn-light projects-btn">UI/UX</button>
     <button onclick="_handleProjects('web-container')" class="btn btn-light projects-btn">Web Design</button>
@@ -724,7 +739,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 </div>
 
 
-<select class="form-select" style="width: 50%;margin: auto;" name="" id="">
+<select id="projectsButtonSelect" class="form-select" style="width: 50%;margin: auto;" name="" id="">
     <option value=""><button onclick="_handleProjects('all-container')" class="btn btn-light projects-btn">All</button></option>
     <option value=""><button style="background-color: #FD6F00;color: #FFFFFF;" onclick="_handleProjects('ui-container')" class="btn btn-light projects-btn">UI/UX</button></option>
     <option value=""><button onclick="_handleProjects('web-container')" class="btn btn-light projects-btn">Web Design</button></option>
