@@ -40,6 +40,26 @@ font-style: normal;
          @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+         :root{
+            --background-color: #ffffff; /* Dark mode background */
+    --text-color: #121212; /* Dark mode text color */
+    --main-color:  #FD6F00; /* Dark mode border color */
+    --box-color: #F8F8F8;
+    --paragraph:#000000;
+         }
+
+         [data-bs-theme='dark'] {
+    --background-color: #121212; /* Dark mode background */
+    --text-color: #ffffff; /* Dark mode text color */
+    --main-color:  #FD6F00; /* Dark mode border color */
+    --box-color: #121212;
+    --paragraph:#000000;
+
+}
+
+h1,h2,h3,h4,h5{
+    color: var(--text-color);
+}
 
 
          section~section:not(:nth-child(1)){
@@ -84,21 +104,43 @@ font-style: normal;
 
 
         .title24{
-            font-size: 24px;
-            color: #000000;
+            font-size: 3.252032520325203vh;
+            color: var(--text-color);
         }
         
         
         .title32{
-            font-size: 32px;
+            font-size:  4.336043360433604vh;
             font-weight:550;
             color: #FD6F00;
         }
 
         .title64{
-            font-size: 50px;
+            font-size: 6.775067750677507vh;
             font-weight:550;
-            color: #000000;
+            color: var(--text-color);
+        }
+
+
+
+        @media only screen and (max-width: 280px) {
+            
+        .title24{
+            font-size: 2.252032520325203vh;
+            
+        }
+        
+        
+        .title32{
+            font-size:  3.336043360433604vh;
+        
+        }
+
+        .title64{
+            font-size: 5.775067750677507vh;
+            font-weight:550;
+            
+        }
         }
 
 
@@ -124,6 +166,7 @@ font-style: normal;
 
         .services-box{
     width: 16rem;height: 100%;background-color: #F8F8F8;text-align: left;padding-block: 1rem;padding-inline: 1rem;border-radius: 0.5rem;
+    color: var(--paragraph);
 }
 
 .services-box i{
@@ -134,10 +177,11 @@ font-style: normal;
 .services-box h4{
     font-size: 29px;
     font-weight: 600;
+    color: #000000;
 }
 
 .services-box p{
-    font-size: 19px;
+    font-size: 17px;
 }
 
 /*  */
@@ -264,9 +308,24 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 .projectDepartment{
     width: 10rem;
+
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -312,43 +371,25 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     <input class="dark-toggle-input" type="checkbox" id="darkmode-toggle" />
     <label class="darkmode-toggle-cl" id="darkmode-toggle-cl" for="darkmode-toggle">
         <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
-            <!-- SVG paths for the sun -->
-             
-            <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001" height="16" />
-            <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)" width="40.001" height="16" />
-            <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001" height="16" />
-    
-            <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16" height="39.999" />
-    
-            <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001" height="16" />
-    
-            <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001" height="16" />
-    
-            <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001" height="16" />
-            <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16" height="39.999" />
-            <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392
-                    c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
-            <rect x="240" width="16" height="72" />
-            <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999" height="16" />
-            <rect y="240" width="72" height="16" />
-    
-            <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16" height="71.999" />
-            <rect x="240" y="424" width="16" height="72" />
-    
-            <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999" height="16" />
-            <rect x="424" y="240" width="72" height="16" />
-            <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16" height="71.999" />
+            <circle cx="248" cy="248" r="120" fill="#FDB813"/>
+            <g fill="#FD6F00">
+                <rect x="240" y="0" width="16" height="80" />
+                <rect x="240" y="416" width="16" height="80" />
+                <rect x="416" y="240" width="80" height="16" />
+                <rect x="0" y="240" width="80" height="16" />
+                <rect x="380.7" y="80.7" transform="rotate(-45 388 88)" width="80" height="16" />
+                <rect x="35.3" y="371.3" transform="rotate(-45 43 379)" width="80" height="16" />
+                <rect x="80.7" y="35.3" transform="rotate(45 88 43)" width="80" height="16" />
+                <rect x="371.3" y="380.7" transform="rotate(45 379 388)" width="80" height="16" />
+            </g>
         </svg>
+
         <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739" style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
-            <!-- SVG paths for the moon -->
-    
-            <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
-           c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
-           c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
-           C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
-           c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
-           c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+            <path fill="#D3D3D3" d="M24.87,49.74c13.72,0,24.87-11.15,24.87-24.87S38.59,0,24.87,0C21.78,0,18.78,0.53,15.98,1.55
+                c0.22,0.95,0.34,1.94,0.34,2.97c0,8.29-6.72,15.01-15.01,15.01c-0.98,0-1.95-0.1-2.89-0.3c1.02,2.8,1.55,5.8,1.55,8.88
+                C0,38.59,11.15,49.74,24.87,49.74z"/>
         </svg>
+        
     </label>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -627,11 +668,11 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     </div>
 
 
-    <div class="container" style="margin: auto !important;">
+    <div class="container" style="margin: auto !important;margin-top: 4rem !important;">
         <div class="row" style="text-align: center;justify-content: space-around;gap: 0.1rem;row-gap: 1rem;">
             <div class="col-md-3 services-box" >
                 <i class="bi bi-clipboard2-pulse"></i>
-                <h4>UI / UX</h4>
+                <h4 class="service-address">UI / UX</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
             </div>
 
@@ -639,7 +680,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
             <div class="col-md-3 services-box" >
                 <i class="bi bi-laptop"></i>
-                <h4>Web Design</h4>
+                <h4 class="service-address">Web Design</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
             </div>
 
@@ -647,7 +688,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
             <div class="col-md-3 services-box" >
                 <i class="bi bi-phone"></i>
-                <h4>App Design</h4>
+                <h4 class="service-address">App Design</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
             </div>
 
@@ -655,7 +696,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
             <div class="col-md-3 services-box" >
                 <i class="bi bi-palette"></i>
-                <h4>Graphic Design</h4>
+                <h4 class="service-address">Graphic Design</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
             </div>
            
@@ -1312,18 +1353,21 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
     <style>
-                .shadow-effect {
-            background: #fff;
-            display: flex;
-            flex-direction: row;flex-wrap: wrap;
-            gap: 3rem;
-            padding: 20px;
-            border-radius: 4px;
-            text-align: center;
-            box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
-            width: 100%; /* Smaller item width */
-            margin: auto;
-        }
+             .shadow-effect {
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+    width: 90%; /* Increased width from 100% to 80% */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: auto;
+}
+
 
         #customers-testimonials .shadow-effect p {
             font-family: inherit;
@@ -1331,6 +1375,9 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             line-height: 1.5;
             margin: 0 0 17px 0;
             font-weight: 300;
+            color: var(--paragraph);
+            text-align: justify;
+            
         }
 
         .testimonial-name {
@@ -1348,7 +1395,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
         #customers-testimonials .item {
             text-align: center;
             /* padding: 30px; */
-			/* width: 100%; */
+			width: 100%;
             opacity: .2;
             transition: all 0.3s ease-in-out;
             /* background-color: black; */
@@ -1364,7 +1411,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
             /* background-color: #3190E7; */
         }
         .owl-carousel .owl-item img {
-            max-width: 90px;
+            max-width: 100%;
             /* margin: 0 auto 17px; */
             border-radius: 50%;
             padding-block: 2rem;
@@ -1409,35 +1456,29 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Dramatically maintain clicks-and-mortar solutions...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
                     </div>
                 </div>
                 <!-- TESTIMONIAL 2 -->
                 <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Dramatically maintain clicks-and-mortar solutions...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
                     </div>
-                </div>
-                <!-- TESTIMONIAL 3 -->
-                <div class="item">
+                </div>  <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Dramatically maintain clicks-and-mortar solutions...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
                     </div>
-                </div>
-                <!-- TESTIMONIAL 4 -->
-                <div class="item">
+                </div>  <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Dramatically maintain clicks-and-mortar solutions...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
                     </div>
-                </div>
-                <!-- TESTIMONIAL 5 -->
-                <div class="item">
+                </div>  <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                        <p>Dramatically maintain clicks-and-mortar solutions...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
                     </div>
                 </div>
             </div>
@@ -1446,33 +1487,31 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 </section>
 
 <script>
-       jQuery(document).ready(function($) {
-							"use strict";
-							//  TESTIMONIALS CAROUSEL HOOK
-							$('#customers-testimonials').owlCarousel({
-								loop: true,
-								center: true,
-								items: 3,
-								margin: 40,
-								autoplay: true,
-								dots: true,
-								autoplayTimeout: 8500,
-								smartSpeed: 450,
-								dotsEach: 1, // Make sure the dots update based on slides
-								responsive: {
-									0: {
-										items: 1
-									},
-									768: {
-										items: 2
-									},
-									1170: {
-										items: 3
-									}
-								},
-								onInitialized: setDots, // Set dots on initialization
-								onTranslated: setDots,  // Ensure dots update on slide change
-							});
+      $('#customers-testimonials').owlCarousel({
+    loop: true,
+    center: true,
+    items: 2, // Reduced from 3 to 2 for a larger item display
+    margin: 80,
+    autoplay: true,
+    dots: true,
+    autoplayTimeout: 8500,
+    smartSpeed: 450,
+    dotsEach: 1,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2 // Keep this to 2 for larger displays
+        },
+        1170: {
+            items: 2 // Keep this to 2 for larger displays
+        }
+    },
+    onInitialized: setDots,
+    onTranslated: setDots,
+});
+
 						
 							// Function to limit dots to 3
 							function setDots(event) {
@@ -1482,7 +1521,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 									$dots.slice(3).remove();  // Ensure only 3 dots are visible
 								}
 							}
-						});
+						
 </script>    
 
 </section>
