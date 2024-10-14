@@ -73,6 +73,11 @@ h1,h2,h3,h4,h5,i{
     color: var(--text-color);
 }
 
+i:hover{
+    opacity: 0.8;
+    transition: 0.5;
+}
+
 
          section~section:not(:nth-child(1)){
             margin-top: 10rem !important;
@@ -195,6 +200,14 @@ h1,h2,h3,h4,h5,i{
         .services-box{
     width: 16rem;height: 100%;background-color: #F8F8F8;text-align: left;padding-block: 1.7rem;padding-inline: 1rem;border-radius: 0.5rem;
     color: var(--paragraph);display: flex;flex-direction: column;gap: 0.5rem;
+    transition: 0.5s;cursor: pointer;
+
+}
+
+.services-box:hover{
+    background-color: #fdfdfd;
+    scale: 1.01;
+    transition: 0.5s;
 }
 
 .services-box i{
@@ -312,9 +325,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 font-size: 40px !important;margin: 0;margin-left: 0 !important;
             }
 
-            .def{
-                display: flex;flex-direction: column-reverse;margin: 0;text-align: center;
-            }
+           
 
             
             
@@ -389,7 +400,8 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 }
 @media only screen and (max-width: 992px){
 .navbar-brandMB{
-    display: block;
+    display: flex;
+    
 }
 
 .navbar-brandPC{
@@ -401,6 +413,30 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     top: 2rem !important;
 }
 
+.DownloadCV-btn{
+    margin-top: 2rem;
+}
+
+.navbar-nav {
+    gap: 0.1rem !important;
+}
+
+
+.def{
+                display: flex;flex-direction: column-reverse;margin: 0;text-align: center;
+            }
+
+            .def .rightContent{
+text-align: center !important;
+            }
+
+
+            .idJob{
+                text-align: center !important;
+                left: 0 !important ;
+                right: 0 !important;
+                margin: 0  !important;
+            }
 }
 
 
@@ -452,7 +488,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
               
             </ul>
     
-            <a style="background-color: #FD6F00;color: white;" class="btn" type="submit">Download CV</a>
+            <a style="background-color: #FD6F00;color: white;" class="btn DownloadCV-btn" type="submit">Download CV</a>
     <!-- Bootstrap 5 switch -->
     <input class="dark-toggle-input" type="checkbox" id="darkmode-toggle" />
     <label class="darkmode-toggle-cl" id="darkmode-toggle-cl" for="darkmode-toggle">
@@ -513,7 +549,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 
               <h1 class="title24">Hi I am </h1>
               <h1 class="title32">Fatma Naser</h1>
-              <div style="display: flex;flex-direction: column;">
+              <div style="display: flex;flex-direction: column;justify-content: center;">
                 <h1 class="idJob" style="font-size: 70px;font-weight: 750;text-shadow: 2px 2px 4px #000000;
 ">UI & UX</h1>
               <h1 class="idJob" style="font-size: 70px;font-weight: 750;margin-left: 11rem;text-shadow: 2px 2px 4px #000000;
@@ -541,16 +577,16 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 border-radius: 50%; 
                 overflow: visible; 
                 background-image: -webkit-gradient(linear, left top, left bottom, 
-  color-stop(0, rgba(255, 207, 176, 1)), 
-  color-stop(1, rgba(176, 176, 176, 0)));
+  color-stop(0, rgba(248, 157, 96, 0.4)), 
+  color-stop(1, rgba(176, 176, 176, 0.4)));
 
-background-image: -moz-linear-gradient(center top, 
-  rgba(255, 207, 176, 1) 0%, 
-  rgba(176, 176, 176, 0) 100%);
+background-image: -moz-linear-gradient(center bottom, 
+  rgb(248, 157, 96) 80%, 
+  rgba(176, 176, 176, 1) 20%);
 
-background-image: linear-gradient(to bottom, 
-  rgba(255, 207, 176, 1) 0%, 
-  rgba(176, 176, 176, 0) 100%);
+background-image: linear-gradient(to top, 
+  rgba(248, 157, 96, 0.8) 70%, 
+  rgba(176, 176, 176, 0.7) 30%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
              ">
