@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const imageMap = new Map();
 
 // Function to add project details to the map
-function addProjectToMap(projectKey, imageName, text1, text2, depart) {
+function addProjectToMap(projectKey, imageName, text1, text2,link, depart) {
     if (!imageMap.has(projectKey)) {
-        imageMap.set(projectKey, { image: imageName, text1, text2, depart });
+        imageMap.set(projectKey, { image: imageName, text1, text2,link, depart });
     } else {
         console.log(`Project ${projectKey} already exists in the map.`);
     }
@@ -28,7 +28,7 @@ function generateHtmlFromMap(department) {
     let htmlContent = ''; // Initialize an empty string to hold HTML content
 
     if(department == 'all'){
-        for (const [project, { image, text1, text2, depart }] of imageMap) {
+        for (const [project, { image, text1, text2, depart,link }] of imageMap) {
                 const imageSrc = `${imageFolder}${image}`; // Create the image source
     
                 // Create HTML string using template literals
@@ -38,7 +38,7 @@ function generateHtmlFromMap(department) {
                             <img class="img-fluid" src="${imageSrc}" alt="${project} Image" onerror="this.onerror=null; this.src='images/noimg.jpg';">
                         </div>
                         <div class="project-content">
-                            <h4>${text1}</h4>
+                        <a href="${link}" target="_blank" ><h4>${text1}</h4></a>
                             <p>${text2}</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ function generateHtmlFromMap(department) {
     }
     // Iterate over the entries in the Map
   else{
-    for (const [project, { image, text1, text2, depart }] of imageMap) {
+    for (const [project, { image, text1, text2, depart,link }] of imageMap) {
         if (depart === department) {
             const imageSrc = `${imageFolder}${image}`; // Create the image source
 
@@ -59,7 +59,7 @@ function generateHtmlFromMap(department) {
                         <img class="img-fluid" src="${imageSrc}" alt="${project} Image" onerror="this.onerror=null; this.src='images/noimg.jpg';">
                     </div>
                     <div class="project-content">
-                        <h4>${text1}</h4>
+                        <a href="${link}" target="_blank" ><h4>${text1}</h4></a>
                         <p>${text2}</p>
                     </div>
                 </div>
@@ -98,11 +98,11 @@ function displayAllProjects() {
 
 
 // Adding projects with images, texts, and departments
-addProjectToMap('project1', 'image1.png', 'UI Project 1', 'Description for UI Project 1', 'ui');
-addProjectToMap('project2', 'image2.png', 'App Project 1', 'Description for App Project 1', 'app');
-addProjectToMap('project3', 'image3.png', 'Web Project 1', 'Description for Web Project 1', 'web');
-addProjectToMap('project4', 'image4.png', 'Graphic Project 1', 'Description for Graphic Project 1', 'graphic');
-addProjectToMap('project5', 'image5.png', 'UI Project 2', 'Description for UI Project 2', 'ui');
+addProjectToMap('project1', 'image1.png', 'UI Project 1', 'Description for UI Project 1','#', 'ui');
+addProjectToMap('project2', 'app3.jfif', 'App Project 1', 'Description for App Project 1','#', 'app');
+addProjectToMap('project3', 'image3.png', 'Web Project 1', 'Description for Web Project 1','#', 'web');
+addProjectToMap('project4', 'image4.png', 'Graphic Project 1', 'Description for Graphic Project 1','#', 'graphic');
+addProjectToMap('project5', 'image5.png', 'UI Project 2', 'Description for UI Project 2','#', 'ui');
 
 // Call one of the functions to display projects for a specific department
 });
