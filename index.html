@@ -392,6 +392,10 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     .IdentiContent{
         margin-top: 3rem !important;
     }
+
+    #contactBtn{
+        margin-top: 1rem !important;
+    }
 }
 
 
@@ -442,6 +446,160 @@ text-align: center !important;
 }
 
 
+
+.shadow-effect {
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+    width: 90%; /* Increased width from 100% to 80% */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: auto;
+    height:32vh ;
+}
+
+
+        #customers-testimonials .shadow-effect p {
+            font-family: inherit;
+            font-size: 2vh;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+            font-weight: 300;
+            color: var(--paragraph);
+            text-align: justify;
+            
+        }
+
+        .testimonial-name {
+            margin: -17px auto 0;
+            display: table;
+            width: auto;
+            background: #3190E7;
+            padding: 9px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+        }
+
+        #customers-testimonials .item {
+            text-align: center;
+            /* padding: 30px; */
+			width: 100%;
+            opacity: .2;
+            transition: all 0.3s ease-in-out;
+            /* background-color: black; */
+            margin: 0 !important;
+        }
+
+        #customers-testimonials .owl-item.active.center .item {
+            opacity: 1;
+            transform: scale3d(1.0, 1.0, 1);
+        }
+
+        .owl-carousel .owl-item{
+            /* background-color: #3190E7; */
+        }
+        .owl-carousel .owl-item img {
+            max-width: 20vh;
+            /* margin: 0 auto 17px; */
+            border-radius: 50%;
+            padding-block: 2rem;
+        }
+
+        .owl-stage-outer {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .owl-stage {
+            padding: 0;
+            margin: 0;
+        }
+
+        .owl-dots {
+            text-align: center;
+			display: flex;justify-content: center;gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .owl-dots .owl-dot span {
+            background: #D9D9D9;
+            display: inline-block;
+            height: 16px;
+            width: 57px;
+            border-radius: 8px;
+            transition: all 250ms ease-out;
+        }
+
+        .owl-dots .owl-dot.active span {
+            background: #FD6F00;
+        }
+
+        #customers-testimonials .shadow-effect .paragrap-comment{
+     
+            display: flex;flex-direction: column;gap: 0 !important;
+        }
+
+        #customers-testimonials .shadow-effect .paragrap-comment .leftSpan{
+            color: #FD6F00 !important;text-align: left;font-size:4vh;position: relative;top: 1rem;
+        }
+
+        #customers-testimonials .shadow-effect .paragrap-comment .rightSpan{
+            color: #FD6F00;text-align: left;font-size:4vh;left: 12rem;position: relative;bottom: 1rem;
+        }
+
+
+        @media only screen and (max-width: 520px) {
+            .owl-dots .owl-dot span {
+                width: 37px !important;
+            }
+            .shadow-effect{
+                flex-wrap: wrap !important;
+                flex-direction: column !important;
+    height:auto !important ;
+            }
+
+
+
+            .owl-carousel .owl-item img {
+            max-width: 11vh;
+            margin: auto !important;
+        }
+
+        #customers-testimonials .shadow-effect p {
+        font-size: 1.8vh !important;
+        }
+
+        #customers-testimonials .shadow-effect p span{
+            margin: 0 !important;
+            display: none !important;
+        }
+
+        .shadow-effect{
+            padding-block: 0 !important;
+            gap: 0 !important;
+        }
+
+        #customers-testimonials .shadow-effect .paragrap-comment{
+            flex-direction: row !important;
+            gap: 2rem !important;
+        }
+        #customers-testimonials .shadow-effect .paragrap-comment span{
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+        }
+        }
+
+        
 </style>
 </head>
 <body>
@@ -1000,217 +1158,18 @@ background-image: linear-gradient(to bottom,
 
 
 
-    <style>
-             .shadow-effect {
-    background: #f1f1f1;
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 1rem;
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
-    width: 90%; /* Increased width from 100% to 80% */
-    max-width: 800px; /* Set a maximum width for larger screens */
-    margin: auto;
-}
-
-
-        #customers-testimonials .shadow-effect p {
-            font-family: inherit;
-            font-size: 2vh;
-            line-height: 1.5;
-            margin: 0 0 17px 0;
-            font-weight: 300;
-            color: var(--paragraph);
-            text-align: justify;
-            
-        }
-
-        .testimonial-name {
-            margin: -17px auto 0;
-            display: table;
-            width: auto;
-            background: #3190E7;
-            padding: 9px 35px;
-            border-radius: 12px;
-            text-align: center;
-            color: #fff;
-            box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
-        }
-
-        #customers-testimonials .item {
-            text-align: center;
-            /* padding: 30px; */
-			width: 100%;
-            opacity: .2;
-            transition: all 0.3s ease-in-out;
-            /* background-color: black; */
-            margin: 0 !important;
-        }
-
-        #customers-testimonials .owl-item.active.center .item {
-            opacity: 1;
-            transform: scale3d(1.0, 1.0, 1);
-        }
-
-        .owl-carousel .owl-item{
-            /* background-color: #3190E7; */
-        }
-        .owl-carousel .owl-item img {
-            max-width: 20vh;
-            /* margin: 0 auto 17px; */
-            border-radius: 50%;
-            padding-block: 2rem;
-        }
-
-        .owl-stage-outer {
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .owl-stage {
-            padding: 0;
-            margin: 0;
-        }
-
-        .owl-dots {
-            text-align: center;
-			display: flex;justify-content: center;gap: 0.5rem;
-            margin-top: 3rem;
-        }
-
-        .owl-dots .owl-dot span {
-            background: #D9D9D9;
-            display: inline-block;
-            height: 16px;
-            width: 57px;
-            border-radius: 8px;
-            transition: all 250ms ease-out;
-        }
-
-        .owl-dots .owl-dot.active span {
-            background: #FD6F00;
-        }
-
-        @media only screen and (max-width: 520px) {
-            .owl-dots .owl-dot span {
-                width: 37px !important;
-            }
-            .shadow-effect{
-                flex-wrap: wrap;
-            }
-
-
-
-            .owl-carousel .owl-item img {
-            max-width: 9vh;
-            margin: auto !important;
-        }
-
-        #customers-testimonials .shadow-effect p {
-        font-size: 1.8vh !important;
-        }
-
-        .shadow-effect{
-            padding-block: 0 !important;
-            gap: 0 !important;
-        }
-
-        }
-
-        
-    </style>
-
 <section class="sectionC" style="background-color: ;width: ;">
     <div class="row" style="width: 100%; margin: 0; padding: 0;">
         <div class="col-sm-12" style="padding: 0;">
+       
             <div id="customers-testimonials" class="owl-carousel">
                 <!-- TESTIMONIAL 1 -->
-                <div class="item">
-                    <div class="shadow-effect">
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                      <div style="display: flex;flex-direction: column;gap: 0 !important;">
-                        <span style="color: #FD6F00;text-align: left;font-size:4vh;position: relative;top: 1rem;">“</span>    
-                        <p>       
-                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
-
-                            </p>
-                            <span style="color: #FD6F00;text-align: left;font-size:4vh;left: 12rem;position: relative;bottom: 1rem;">“</span>
-
-                      </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="shadow-effect">
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
-                    </div>
-                </div><div class="item">
-                    <div class="shadow-effect">
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
-                    </div>
-                </div><div class="item">
-                    <div class="shadow-effect">
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
-                    </div>
-                </div><div class="item">
-                    <div class="shadow-effect">
-                        <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</p>
-                    </div>
-                </div>
+               
             </div>
-        </div>
+            </div>
     </div>
 </section>
 
-<script>
-      $('#customers-testimonials').owlCarousel({
-    loop: true,
-    center: true,
-    items: 2, // Reduced from 3 to 2 for a larger item display
-    margin: 80,
-    autoplay: true,
-    dots: true,
-    autoplayTimeout: 8500,
-    smartSpeed: 450,
-    dotsEach: 1,
-    responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2 // Keep this to 2 for larger displays
-        },
-        1170: {
-            items: 2 // Keep this to 2 for larger displays
-        }
-    },
-    onInitialized: setDots,
-    onTranslated: setDots,
-});
-
-						
-							// Function to limit dots to 3
-							function setDots(event) {
-								var $dots = $('#customers-testimonials .owl-dots .owl-dot');
-								// Remove extra dots
-								if ($dots.length > 3) {
-									$dots.slice(3).remove();  // Ensure only 3 dots are visible
-								}
-							}
-						
-</script>    
 
 </section>
 
@@ -1242,7 +1201,7 @@ background-image: linear-gradient(to bottom,
         </div>
 
         <div class="col-md-2">
-            <button class="btn" style="background-color: #FD6F00;color: white;width: 130px;font-weight: 550;font-size: 17px;border-radius: 1vh !important;">Contact Me</button>
+            <button id="contactBtn" class="btn" style="background-color: #FD6F00;color: white;width: 130px;font-weight: 550;font-size: 17px;border-radius: 1vh !important;">Contact Me</button>
         </div>
     </div>
   </div>
@@ -1386,6 +1345,7 @@ background-image: linear-gradient(to bottom,
     <script src="script/owlcrouseljs.js"></script>
 
     <script src="images/NOjs.js"></script>
+    <script src="testimonials/comments.js"></script>
 
     <script>
 
