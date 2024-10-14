@@ -384,6 +384,26 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 }
 
 
+.navbar-brandMB{
+    display: none;
+}
+@media only screen and (max-width: 992px){
+.navbar-brandMB{
+    display: block;
+}
+
+.navbar-brandPC{
+    display: none;
+}
+
+#darkmode-toggle, #darkmode-toggle-cl{
+    position: relative !important;
+    top: 2rem !important;
+}
+
+}
+
+
 </style>
 </head>
 <body>
@@ -392,11 +412,18 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 <header>
     
     <nav class="navbar navbar-expand-lg navbar-light  container-fluid">
+        <a class="navbar-brand navbar-brandMB" href="#">
+            <img src="images/logo/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+            <span style="color: var(--logo-text);font-weight: 600;font-size: 4vh;">
+                F<span style="color: var(--logo-text-second);font-weight: 10;font-size: 3.7vh;">atma</span>
+            </span>
+        </a>
         <button class="navbar-toggler" type="button" toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNavF" aria-controls="navbarNavF" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-custom" data-bs-toggle="collapse" id="navbarNavF">
-            <a class="navbar-brand" href="#">
+           
+            <a class="navbar-brand navbar-brandPC" href="#">
                 <img src="images/logo/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
                 <span style="color: var(--logo-text);font-weight: 600;font-size: 4vh;">
                     F<span style="color: var(--logo-text-second);font-weight: 10;font-size: 3.7vh;">atma</span>
@@ -504,7 +531,30 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
             <div class="col-md-6" style="display: flex;flex-direction: column;">
-                <div style="margin: auto;
+                <div style="
+                margin:  auto;
+                position: relative; 
+                width: 54.5vw; /* Make it responsive by using viewport width */
+                height: 54.5vw; /* Maintain the aspect ratio for responsiveness */
+                max-width: 407px; /* Limit the maximum size on larger screens */
+                max-height: 403px; 
+                border-radius: 50%; 
+                overflow: visible; 
+                background-image: -webkit-gradient(linear, left top, left bottom, 
+  color-stop(0, rgba(255, 207, 176, 1)), 
+  color-stop(1, rgba(176, 176, 176, 0)));
+
+background-image: -moz-linear-gradient(center top, 
+  rgba(255, 207, 176, 1) 0%, 
+  rgba(176, 176, 176, 0) 100%);
+
+background-image: linear-gradient(to bottom, 
+  rgba(255, 207, 176, 1) 0%, 
+  rgba(176, 176, 176, 0) 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+             ">
+                    <div style="margin: auto;
                 position: relative; 
                 width: 54vw; /* Make it responsive by using viewport width */
                 height: 54vw; /* Maintain the aspect ratio for responsiveness */
@@ -512,15 +562,17 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 max-height: 400px; 
                 border-radius: 50%; 
                 overflow: visible; 
-                border: 5px solid orange;">
+                 background-color: var(--body-bg);
+                
+                ">
               
                 <img src="images/WhatsApp_Image_2024-10-11_at_11.03.40_PM-removebg-preview.png" alt="Styled Image" style="
                   position: absolute;
-                  width: 100%; /* Slightly larger to ensure it extends out */
-                  top: -15%; /* Move image upward */
+                  width: 97%; /* Slightly larger to ensure it extends out */
+                  top: -12%; /* Move image upward */
                   left: 50%; 
                   transform: translateX(-50%); /* Center horizontally */
-                  border-radius: 50%;">
+                  border-radius: 45.5%;">
 
 
 
@@ -534,6 +586,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     transform: translateY(-50%);">
   </div>
               </div>
+                </div>
 
 
 
@@ -576,7 +629,31 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
 
 
             <div class="col-md-6 leftImg" style="display: flex;flex-direction: column;">
-                <div style="margin: auto;
+                
+                <div style="
+                margin:  auto;
+                position: relative; 
+                width: 54.5vw; /* Make it responsive by using viewport width */
+                height: 54.5vw; /* Maintain the aspect ratio for responsiveness */
+                max-width: 407px; /* Limit the maximum size on larger screens */
+                max-height: 403px; 
+                border-radius: 50%; 
+                overflow: visible; 
+                background-image: -webkit-gradient(linear, left top, left bottom, 
+  color-stop(0, rgba(255, 207, 176, 1)), 
+  color-stop(1, rgba(176, 176, 176, 0)));
+
+background-image: -moz-linear-gradient(center top, 
+  rgba(255, 207, 176, 1) 0%, 
+  rgba(176, 176, 176, 0) 100%);
+
+background-image: linear-gradient(to bottom, 
+  rgba(255, 207, 176, 1) 0%, 
+  rgba(176, 176, 176, 0) 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+             ">
+                    <div style="margin: auto;
                 position: relative; 
                 width: 54vw; /* Make it responsive by using viewport width */
                 height: 54vw; /* Maintain the aspect ratio for responsiveness */
@@ -584,15 +661,17 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
                 max-height: 400px; 
                 border-radius: 50%; 
                 overflow: visible; 
-                border: 5px solid orange;">
+                 background-color: var(--body-bg);
+                
+                ">
               
                 <img src="images/WhatsApp_Image_2024-10-11_at_11.03.40_PM-removebg-preview.png" alt="Styled Image" style="
                   position: absolute;
                   width: 97%; /* Slightly larger to ensure it extends out */
-                  top: -10%; /* Move image upward */
+                  top: -12%; /* Move image upward */
                   left: 50%; 
                   transform: translateX(-50%); /* Center horizontally */
-                  border-radius: 50%;">
+                  border-radius: 45.5%;">
 
 
 
@@ -606,6 +685,7 @@ font-size: 22px;font-weight: 700;margin: 0;margin-top: 0.5rem;
     transform: translateY(-50%);">
   </div>
               </div>
+                </div>
 
 
 
