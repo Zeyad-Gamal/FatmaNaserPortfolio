@@ -651,6 +651,56 @@ text-align: center !important;
         }
         }
 
+
+        .profileImg1{
+            opacity: 0;
+            animation: imgAnim 1.2s forwards alternate;
+        }
+
+        #designerJob2{
+            transform: translateX(-11rem);
+
+            animation: jobAnim 1.2s 0.5s forwards alternate;
+            
+
+        }
+
+        .socialMedias{
+            transform: rotate(180deg);
+            animation: socials 1.2s forwards alternate;
+
+        }
+
+
+        @keyframes imgAnim {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes jobAnim {
+            0%{
+                transform: translateX(-11rem);
+            }
+            100%{
+                transform: translateX(0rem);
+            }
+        }
+
+
+        @keyframes socials {
+            0%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
         
 </style>
 </head>
@@ -759,20 +809,20 @@ text-align: center !important;
         <div class="row def" style="margin-top: 5rem;align-items: center !important;">
             <div class="col-md-6 IdentiContent">
                 
-              <h1 class="title24">Hi I am </h1>
-              <h1 class="title32">Fatma Naser</h1>
+              <h1 class="title24" id="_IntroductionText"></h1>
+              <h1 class="title32" id="DesignerName"></h1>
               <div style="display: flex;flex-direction: column;justify-content: center;">
-                <h1 class="idJob" style="font-size: 70px;font-weight: 750;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-">UI & UX</h1>
-              <h1 class="idJob" style="font-size: 70px;font-weight: 750;margin-left: 11rem;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-">Designer</h1>
+                <h1 id="designerJob1" class="idJob" style="font-size: 70px;font-weight: 750;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+"></h1>
+              <h1 id="designerJob2" class="idJob" style="font-size: 70px;font-weight: 750;margin-left: 11rem;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+"></h1>
               </div>
 
 <div>
-    <p class="" style="font-size: 21px;margin-top: 2rem;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+    <p id="HomeDescribtion" class="" style="font-size: 21px;margin-top: 2rem;"></p>
 
 </div>           
-              <a style="background-color: #FD6F00;color: white;width: 18vh;" class="btn" type="submit">Hire Me</a>
+              <a href="#contact" style="background-color: #FD6F00;color: white;width: 18vh;" class="btn" >Hire Me</a>
 
             </div>
 
@@ -814,7 +864,7 @@ background-image: linear-gradient(to top,
                 
                 ">
               
-                <img src="images/profile1.png" alt="Styled Image" style="
+                <img class="profileImg1" src="images/profile1.png" alt="Styled Image" style="
                   position: absolute;
                   width: 97%; /* Slightly larger to ensure it extends out */
                   height: 105%;
@@ -840,10 +890,10 @@ background-image: linear-gradient(to top,
 
 
               <div class="socials-Iden" >
-                <a href="" ><i class="bi bi-facebook" ></i></a>
-                <a href="" ><i class="bi bi-twitter" ></i></a>
-                <a href="" ><i class="bi bi-instagram" ></i></a>
-                <a href="" ><i class="bi bi-linkedin" ></i></a>
+                <a href="" target="_blank" class="socialMedias facebook-socialMedia"><i class="bi bi-facebook" ></i></a>
+                <a href="" target="_blank" class="socialMedias twitter-socialMedia"><i class="bi bi-twitter" ></i></a>
+                <a href="" target="_blank" class="socialMedias instagram-socialMedia"><i class="bi bi-instagram" ></i></a>
+                <a href="" target="_blank" class="socialMedias linkedin-socialMedia"><i class="bi bi-linkedin" ></i></a>
 
               </div>
 
@@ -955,7 +1005,7 @@ background-image: linear-gradient(to bottom,
             <div class="col-md-6 rightContent">
                 
               <h1 class="title64">About Me </h1>
-              <p class="paragraph" style="font-size: 20px;margin-top: 2rem;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+              <p id="about-describtion" class="paragraph" style="font-size: 20px;margin-top: 2rem;"></p>
 
 
               <style>
@@ -1010,9 +1060,9 @@ background-image: linear-gradient(to bottom,
               </style>
 
 <div class="container progressContainer">
-    <div class="row">
-        <div class="col-md-10">
-            <h3 class="progress-title">UX</h3>
+    <div  class="row">
+        <div class="col-md-10" id="about-progress-container">
+            <!-- <h3 class="progress-title">UX</h3>
             <div class="progress">
                 <div class="progress-barS" style="width:100%; background:#FD6F00;"></div>
             </div>
@@ -1030,7 +1080,7 @@ background-image: linear-gradient(to bottom,
             <h3 class="progress-title">Graphic Design</h3>
             <div class="progress">
                 <div class="progress-barS" style="width:55%; background:#FD6F00;"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -1056,13 +1106,13 @@ background-image: linear-gradient(to bottom,
 <section id="services" class="sectionC services">
     <h1 class="title64" style="text-align: center;">Services </h1>
     <div class="paragraph" style="display: flex;justify-content: center;width: 50%;margin: auto;">
-        <p class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+        <p id="services-describtion" class="" style="font-size: 17px;margin-top: 2rem;text-align: center;"></p>
     </div>
 
 
     <div class="" style="margin: auto !important;margin-top: 4rem !important;padding: 1.5rem;">
-        <div class="row" style="text-align: center;justify-content: center;gap: 1.5rem;row-gap: 1rem;">
-            <div class="col-md-3 services-box" >
+        <div id="serviceContainer" class="row" style="text-align: center;justify-content: center;gap: 1.5rem;row-gap: 1rem;">
+            <!-- <div class="col-md-3 services-box" >
                 <i class="bi bi-clipboard2-pulse"></i>
                 <h4 class="service-address">UI / UX</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
@@ -1090,7 +1140,7 @@ background-image: linear-gradient(to bottom,
                 <i class="bi bi-palette"></i>
                 <h4 class="service-address">Graphic Design</h4>
                 <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
-            </div>
+            </div> -->
            
         </div>
     </div>
@@ -1103,7 +1153,7 @@ background-image: linear-gradient(to bottom,
 <section id="projects" class="sectionC projects">
     <h1 class="title64" style="text-align: center;">My Projects </h1>
     <div class="paragraph" style="display: flex;justify-content: center;width: 50%;margin: auto;">
-        <p class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+        <p id="projects-describtion-paragraph" class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
     </div>
 
 
@@ -1206,13 +1256,13 @@ background-image: linear-gradient(to bottom,
 
 <section id="testimonials" class="sectionC testimonials" style="width: 100%;">
     <h1 class="title64" style="text-align: center;">Testimonials </h1>
-    <div class="paragraph" style="display: flex;justify-content: center;width: 50%;margin: auto;">
-        <p class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+    <div  class="paragraph" style="display: flex;justify-content: center;width: 50%;margin: auto;">
+        <p id="testimonials-describtion-paragraph" class="" style="font-size: 17px;margin-top: 2rem;text-align: center;"></p>
     </div>
 
 
 
-<section class="sectionC" style="background-color: ;width: ;">
+<section class="sectionC" style="background-color: ;width: ;margin-top: 3rem;">
     <div class="row" style="width: 100%; margin: 0; padding: 0;">
         <div class="col-sm-12" style="padding: 0;">
        
@@ -1244,18 +1294,18 @@ background-image: linear-gradient(to bottom,
 <section id="contact" class="sectionC contact">
     <h1 class="title64" style="text-align: center;">Lets Design Together </h1>
     <div class="paragraph" style="display: flex;justify-content: center;width: 50%;margin: auto;">
-        <p class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+        <p id="contact-describtion-paragraph" class="" style="font-size: 17px;margin-top: 2rem;text-align: center;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
     </div>
 
 
   <div class="container" style="margin-top: 3rem;">
     <div class="row" style="justify-content: center !important;gap: 12px; ">
         <div class="col-md-4">
-            <input class="form-control emailInput" type="email" style="background-color: #ffffff;color: #121212;margin-right: 12px !important; " placeholder="Enter Your Email">
+            <input id="EmailMessage" class="form-control emailInput" type="email" style="background-color: #ffffff;color: #121212;margin-right: 12px !important; " placeholder="Enter Your Email">
         </div>
 
         <div class="col-md-2">
-            <button id="contactBtn" class="btn" style="background-color: #FD6F00;color: white;width: 130px;font-weight: 550;font-size: 17px;border-radius: 1vh !important;">Contact Me</button>
+            <button id="contactBtn" onclick="sendEmail();" class="btn" style="background-color: #FD6F00;color: white;width: 130px;font-weight: 550;font-size: 17px;border-radius: 1vh !important;">Contact Me</button>
         </div>
     </div>
   </div>
@@ -1270,7 +1320,7 @@ background-image: linear-gradient(to bottom,
 
 
 
-<footer style="margin-top: 10rem;background-color: var(--footer-up);">
+<footer style="margin-top: 15rem !important;background-color: var(--footer-up);">
    <div style="display: flex;justify-content: center;align-items: center;">
     <a class="" href="#" style="text-align: center;display: flex;align-items: center;gap: 1rem; text-decoration: none;">
         <img src="images/logo/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
@@ -1296,39 +1346,39 @@ background-image: linear-gradient(to bottom,
             <!-- Grid column -->
             <div class="">
               <h6 class=" font-weight-bold">
-                <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">Home</a>
+                <a href="#definition" style="color: var(--text-color);" class=" text-decoration-none">Home</a>
               </h6>
             </div>
 
 
             <div class="">
                 <h6 class=" font-weight-bold">
-                  <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">About Me</a>
+                  <a href="#aboutme" style="color: var(--text-color);" class=" text-decoration-none">About Me</a>
                 </h6>
               </div>
 
               <div class="">
                 <h6 class=" font-weight-bold">
-                  <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">Services</a>
+                  <a href="#services" style="color: var(--text-color);" class=" text-decoration-none">Services</a>
                 </h6>
               </div>
 
               <div class="">
                 <h6 class=" font-weight-bold">
-                  <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">Projects</a>
+                  <a href="#projects" style="color: var(--text-color);" class=" text-decoration-none">Projects</a>
                 </h6>
               </div>
 
               <div class="">
                 <h6 class=" font-weight-bold">
-                  <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">Testimonials</a>
+                  <a href="#testimonials" style="color: var(--text-color);" class=" text-decoration-none">Testimonials</a>
                 </h6>
               </div>
 
               
               <div class="">
                 <h6 class=" font-weight-bold">
-                  <a href="#!" style="color: var(--text-color);" class=" text-decoration-none">Contact</a>
+                  <a href="#contact" style="color: var(--text-color);" class=" text-decoration-none">Contact</a>
                 </h6>
               </div>
             <!-- Grid column -->
@@ -1344,22 +1394,22 @@ background-image: linear-gradient(to bottom,
 
       
         <div class="text-center mb-5" style="margin-top: 7rem;">
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4 facebook-socialMedia">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4 twitter-socialMedia">
             <i class="bi bi-twitter"></i>
           </a>
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          <!-- <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4">
             <i class="bi bi-google"></i>
-          </a>
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          </a> -->
+          <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4 instagram-socialMedia">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4 linkedin-socialMedia">
             <i class="bi bi-linkedin"></i>
           </a>
-          <a href="" class="text-decoration-none text-white fs-5 me-4">
+          <a href="" target="_blank" class="text-decoration-none text-white fs-5 me-4 github-socialMedia">
             <i class="bi bi-github"></i>
           </a>
         </div>
@@ -1400,7 +1450,8 @@ background-image: linear-gradient(to bottom,
 
     <script src="projects/NOjs.js"></script>
     <script src="testimonials/comments.js"></script>
-
+    <script src="script/script.js"></script>
+    <script src="Main/main.js"></script>
     <script>
 
        var _projectsBtns =  document.querySelectorAll('.projects-btn');
@@ -1458,6 +1509,18 @@ background-image: linear-gradient(to bottom,
     </script>
 
 
+<script>
+    function sendEmail() {
+        const subject = 'Message from portfolio';
+        const message = document.getElementById('EmailMessage').value;
+
+        // Construct the mailto link
+        const mailtoLink = `mailto:ttt&body=${encodeURIComponent(message)}`;
+
+        // Open the default mail client
+        window.location.href = mailtoLink;
+    }
+</script>
 
 
 <!-- <script src="script/handleProjects.js"></script> -->

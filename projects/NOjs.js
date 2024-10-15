@@ -114,7 +114,7 @@ function displayAllProjects() {
 
 
 addProjectToMap('1', 'image1.png', 'UI Project 1', 'Description for UI Project 1','#', 'ui');
-addProjectToMap('2', 'app3.jfif', 'App Project 1', 'Description for App Project 1','#', 'app');
+addProjectToMap('2', 'app3.jfif', 'App Project 1', 'Description for App Project 1','link', 'app');
 addProjectToMap('3', 'image3.png', 'Web Project 1', 'Description for Web Project 1','#', 'web');
 addProjectToMap('4', 'image4.png', 'Graphic Project 1', 'Description for Graphic Project 1','#', 'graphic');
 addProjectToMap('5', 'image5.png', 'UI Project 2', 'Description for UI Project 2','#', 'ui');
