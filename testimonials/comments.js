@@ -32,11 +32,15 @@ function displayComments() {
 
                      <div class="item">
                     <div class="shadow-effect" >
-                        <img style="" class="img-circle" src="${commentimageSrc}"   onerror="this.onerror=null; this.src='testimonials/nouser.avif';">
+                        <img style="" class="img-circle" src="${commentimageSrc}"   onerror="this.onerror=null; this.src='images/no user/review.avif';">
                       <div class="paragrap-comment" >
+                        <p>
                         <span class="leftSpan" >“</span>    
-                        <p>${comment}</p>
+                        
+                        ${comment}
                             <span class="rightSpan" >“</span>
+                        
+                        </p>
 
                       </div>
                     </div>
@@ -68,8 +72,14 @@ function displayComments() {
 
 
 
-addCommentToMap('project5','ds', 'ui');
-addCommentToMap('das','image1.png', '5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd ');
+
+//                                     ADD reviews
+
+
+//                                    (      key    ,    image    ,    review text     )
+
+addCommentToMap('1','ds', 'ui');
+addCommentToMap('2','image1.png', 'h k lk wqldq');
 
 
 
@@ -84,6 +94,27 @@ addCommentToMap('das','image1.png', '5sdsd c5sdsd 5sdsd c5sdsd 5sdsd c5sdsd 5sds
 // ---------------------------------------------------------
 // ---------------------------------------------------------
 // ---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        $('#customers-testimonials').owlCarousel({
     loop: true,
     center: true,
